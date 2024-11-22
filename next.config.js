@@ -10,6 +10,9 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
+  // metadata: {
+  //   metadataBase: new URL('https://yourdomain.com'), // Replace with your domain
+  // },
   webpack: (config, { dev, isServer }) => {
     // Production optimizations
     if (!dev && !isServer) {
@@ -29,7 +32,8 @@ const nextConfig = {
             vendor: {
               test: /[\\/]node_modules[\\/]/,
               name(module) {
-                const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+                const match = module.context?.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/);
+                const packageName = match ? match[1] : 'unknown';
                 return `vendor.${packageName.replace('@', '')}`;
               },
               priority: -10,
@@ -46,6 +50,6 @@ const nextConfig = {
     }
     return config;
   },
-}
+};
 
 module.exports = nextConfig;
