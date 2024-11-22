@@ -62,7 +62,7 @@ export function Hero() {
             <span className="sr-only">GitHub Profile</span>
           </Button>
         </Link>
-        <Link href="https://linkedin.com/in/abdessamii" target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.linkedin.com/in/abdessamii-salhi/" target="_blank" rel="noopener noreferrer">
           <Button variant="outline" size="icon" className="rounded-full hover:scale-110 transition-transform" aria-label="Connect on LinkedIn">
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn Profile</span>
