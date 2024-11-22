@@ -26,7 +26,7 @@ export function Hero() {
         className="w-32 h-32 mx-auto rounded-full border-4 border-primary/50 overflow-hidden"
       >
         <Image
-          src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=256&h=256&fit=crop&q=75&fm=webp"
+          src="/profile.png"
           alt="Abdessamii Salhi"
           width={256}
           height={256}
